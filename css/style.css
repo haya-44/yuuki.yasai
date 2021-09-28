@@ -1,0 +1,639 @@
+@charset "utf-8";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+input,
+button,
+textarea,
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* 基本設定
+****************************************/
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  font-family: "源ノ角ゴシック Regular", "源ノ角ゴシック", "Noto Sans JP", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  height: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+iframe {
+  vertical-align: middle;
+}
+
+/* CLEAR-FIX */
+.clearfix {
+  zoom: 1;
+}
+
+.clearfix:after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  transition: 0.3s;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+.pc {
+  display: block;
+}
+
+.sp {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.inner {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.t_center {
+  text-align: center;
+}
+
+.select_link a {
+  color: #f29533;
+}
+
+/*ヘッダー
+-----------------------------*/
+
+.wrap {
+  overflow: hidden;
+}
+
+.header {
+  position: relative;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.logo,
+.catch {
+  position: absolute;
+  left: 10vw;
+}
+
+.logo {
+  top: 10%;
+  width: 28vw;
+}
+
+.catch {
+  top: 30%;
+  width: 37vw;
+}
+
+.catch::before {
+  content: "Scroll＿＿";
+  position: absolute;
+  color: #fff;
+  font-size: 16px;
+  top: 170%;
+  left: -25%;
+  transform: rotate(90deg);
+}
+
+.slider img {
+  height: auto;
+  width: 100%;
+  max-width: 100vw;
+}
+
+.header_nav {
+  padding-top: 20px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header_nav_menu {
+  justify-content: flex-end;
+  font-weight: bold;
+}
+
+.header_nav_menu li + li {
+  margin-left: 50px;
+}
+
+.header_nav_menu a:hover {
+  color: #ffaa4d;
+}
+
+/*フローティング
+-----------------------------*/
+
+.float_nav {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translate(-50%, -50%);
+  writing-mode: vertical-lr;
+  z-index: 19;
+}
+
+.float_veg a {
+  background: #a3af6d;
+}
+
+.float_fru a {
+  background: #eebc5b;
+}
+
+.float_veg a,
+.float_fru a {
+  padding: 60px 20px;
+  white-space: nowrap;
+}
+
+/*CV
+-----------------------------*/
+
+.cv {
+  justify-content: space-around;
+  margin: 100px auto;
+}
+
+/*メイン
+-----------------------------*/
+
+.main h2 {
+  font-size: 40px;
+  font-weight: bold;
+  color: #f29533;
+  margin-bottom: 30px;
+}
+
+.kodawari {
+  position: relative;
+  margin: 100px auto 300px;
+}
+
+.kodawari h3 {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.kodawari_text {
+  position: absolute;
+  top: 87%;
+  left: 50%;
+  width: 60vw;
+  padding: 20px 0;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  border: solid 1px rgba(85, 85, 85, 0.8);
+}
+
+/*みちのえき
+-----------------------------*/
+
+.michinoeki h2 {
+  font-size: 22px;
+}
+
+.michinoeki_cts {
+  position: relative;
+  margin-top: 50px;
+}
+
+.michinoeki_text {
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
+
+/*地図
+-----------------------------*/
+
+.map {
+  margin-top: 100px;
+}
+
+.map h2 {
+  font-size: 40px;
+  margin: 30px 0;
+}
+
+/*おすすめ野菜
+-----------------------------*/
+
+.recommend {
+  width: 98%;
+  max-width: 980px;
+  margin: 150px auto 100px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.recommend_box {
+  width: 350px;
+}
+
+.hukidashi {
+  position: relative;
+  background: #83cc56;
+  color: #fff;
+  font-size: 28px;
+  padding: 10px;
+  margin: 30px;
+}
+
+.hukidashi::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -40px;
+  transform: translateY(-50%);
+  border-left: 22px solid transparent;
+  border-right: 22px solid #83cc56;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid #83cc56;
+  z-index: 2;
+}
+
+.recommend_text {
+  text-align: left;
+}
+
+/*フッター
+-----------------------------*/
+
+.footer {
+  position: relative;
+  margin: 50px 0 0;
+  background: #f29533;
+  color: #fff;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 100%;
+  height: 5vw;
+  background-image: url(../image/footer_back.png);
+  background-position: top;
+  background-repeat: repeat-x;
+  /*    background-size: 20%;*/
+  z-index: 0;
+}
+
+.footer_box {
+  position: relative;
+  z-index: 1;
+  padding: 100px 0 60px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer_box::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  width: 1px;
+  height: 120px;
+}
+
+.footer_nav_menu a {
+  display: block;
+  color: #fff;
+}
+
+.footer_nav_menu li + li {
+  margin: 30px 50px 0 0;
+}
+
+.footer_btn {
+  width: 300px;
+  font-size: 20px;
+}
+
+.footer_right p:first-child {
+  margin-bottom: 20px;
+}
+
+.footer_btn a {
+  display: block;
+  color: #663f16;
+  background: #fff;
+  padding: 10px 0;
+  border-radius: 10px;
+}
+
+.copy {
+  font-size: 12px;
+  padding-bottom: 50px;
+}
+
+/*レスポンシブ*/
+
+@media screen and (max-width: 828px) {
+
+  .pc {
+    display: none;
+  }
+
+  .sp {
+    display: block;
+  }
+
+  /*    header レスポンシブ
+    -----------------------------*/
+
+  .slider img {
+    height: 320px;
+    width: 100%;
+    max-width: 100vw;
+    object-fit: cover;
+  }
+
+  .header_nav {
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+    z-index: 9;
+    background: #fff;
+  }
+
+  .header_nav_hum {
+    position: relative;
+    width: 40px;
+    height: 28px;
+  }
+
+  .header_nav_hum span {
+    position: absolute;
+    display: block;
+    background: #f29533;
+    width: 40px;
+    height: 4px;
+    left: 0;
+    transition: 0.3s;
+  }
+
+  .header_nav_hum span:nth-child(1) {
+    top: 0;
+  }
+
+  .header_nav_hum.active span:nth-of-type(1) {
+    transform: translateY(12px) rotate(-45deg);
+  }
+
+  .header_nav_hum span:nth-of-type(2) {
+    top: 12px;
+  }
+
+  .header_nav_hum.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  .header_nav_hum span:nth-of-type(3) {
+    bottom: 0;
+  }
+
+  .header_nav_hum.active span:nth-of-type(3) {
+    transform: translateY(-12px) rotate(45deg);
+  }
+
+  .hum_menu {
+    position: fixed;
+    top: 80px;
+    right: -100vw;
+    width: 100%;
+    height: 100vh;
+    background: rgba(242, 149, 51, 0.5);
+    transition: 0.3s;
+    z-index: 9;
+  }
+
+  .hum_menu.active {
+    right: 0;
+  }
+
+  .header_nav_menu {
+    display: block;
+  }
+
+  .header_nav_menu a {
+    display: block;
+    color: #fff;
+    font-size: 20px;
+    padding: 20px;
+    border-bottom: solid 2px #fff;
+    background: #f29533;
+  }
+
+  .header_nav_menu a:hover {
+    opacity: 1;
+    color: #ffd7aa;
+  }
+
+  .header_nav_menu li + li {
+    margin-left: 0;
+  }
+
+  .logo {
+    top: 18%;
+    transform: rotate(3deg);
+  }
+
+  .catch {
+    top: 37%;
+    width: 48vw;
+  }
+
+  .catch::before {
+    display: none;
+  }
+
+  .slider.sp {
+    margin-top: 80px;
+  }
+
+  /*フローティング　レスポンシブ
+    -----------------------------*/
+
+  .float_nav {
+    position: fixed;
+    writing-mode: horizontal-tb;
+    top: 100%;
+    right: 0;
+    transform: none;
+  }
+
+  .float_veg a,
+  .float_fru a {
+    display: block;
+    width: 50vw;
+    white-space: nowrap;
+    padding: 20px;
+    transform: translateY(-100%);
+  }
+
+  /*    CV レスポンシブ
+    -----------------------------*/
+
+  .cv {
+    display: block;
+    margin: 50px auto;
+    width: 75vw;
+  }
+
+  .fruits_cv {
+    margin-top: 50px;
+  }
+
+  /*    メイン レスポンシブ
+  -----------------------------*/
+
+  .main h2 {
+    font-size: 24px;
+  }
+
+  .main img {
+    max-width: 120vw;
+  }
+
+  .main_text {
+    margin: 0 5px;
+  }
+
+  .kodawari {
+    margin: 50px auto;
+  }
+
+  .kodawari_text {
+    position: static;
+    width: 90vw;
+    margin: 50px auto;
+    transform: none;
+    padding: 10px;
+  }
+
+  .kodawari_text h3 {
+    font-size: 20px;
+  }
+
+  .kodawari_text p {
+    font-size: 14px;
+    text-align: justify;
+  }
+
+  /*    みちのえき レスポンシブ
+    -----------------------------*/
+
+  .michinoeki_text {
+    position: static;
+    margin-top: 30px;
+  }
+
+  /*    おすすめの野菜 レスポンシブ
+  -----------------------------*/
+
+  .recommend {
+    margin: 50px auto 100px;
+  }
+
+  .recommend_box {
+    width: 88%;
+    text-align: center;
+  }
+
+  .hukidashi {
+    font-size: 20px;
+    white-space: nowrap;
+  }
+
+  .hukidashi::before {
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 15px solid transparent;
+    border-top: 15px solid #83cc56;
+    z-index: 2;
+  }
+
+  .recommend_text {
+    margin-top: 30px;
+  }
+
+  /*    footer レスポンシブ
+    -----------------------------*/
+
+  .footer {
+    padding-bottom: 50px;
+  }
+
+  .footer_box {
+    display: block;
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  .footer_left {
+    justify-content: space-around;
+  }
+
+  .footer_nav_menu li {
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .footer_nav_menu li + li {
+    margin: 20px 0;
+  }
+
+  .footer_box::before {
+    display: none;
+  }
+
+  .footer::before {
+    top: -18px;
+  }
+
+}
